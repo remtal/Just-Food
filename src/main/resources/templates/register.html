@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <title>Recipes</title>
+</head>
+<body>
+
+<main>
+    <header>
+        <h2>Register</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" th:href="@{/}">Home</a></li>
+
+            <li><a href="breakfast.html" th:href="@{/register}">Breakfast</a></li>
+            <li><a href="lunch.html" th:href="@{/lunch}">Lunch</a></li>
+            <li><a href="dinner.html" th:href="@{/dinner}">Dinner</a></li>
+
+            <div class="dropdown">
+                <li>
+                    <a onclick="show_menu()" class="dropdownlink">Other</a>
+                </li>
+                <div id="other" class="menuitems">
+                    <li><a href="snacks.html" th:href="@{/snacks}">Snacks</a></li>
+                    <li><a href="drinks.html" th:href="@{/drinks}">Drinks</a></li>
+                    <li><a href="icecream.html" th:href="@{/icecream}">Ice-Cream</a></li>
+                </div>
+
+            </div>
+        </ul>
+
+    </nav>
+
+    <form th:action="@{register}" method="post" th:object="${recipeUser}">
+
+        <fieldset>
+            <legend>User Information</legend>
+            <table>
+                <tr>
+                    <td><label for="title" >Title:</label></td>
+                    <td>
+                        <select id="title" th:field="*{title}">
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Ms">Ms</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="fname">First Name</label>
+                    <td><input type="text" id="fname" pattern="[A-Za-z]*"
+                               title="Your name must contain only letters."
+                               th:field="*{firstName}"/></td>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="lname">Last Name</label></td>
+                    <td><input type="text" id="lname" pattern="[A-Za-z]*"
+                               title="Your name must contain only letters."
+                               th:field="*{lastName}"/></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input type="email" id="email"
+                               th:field="*{email}"/></td>
+                </tr>
+                <tr>
+                    <td><label for="pword">Password</label></td>
+                    <td><input type="password" id="pword" minlength="6" th:field="*{password}"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Register"/></td>
+                </tr>
+
+
+            </table>
+        </fieldset>
+    </form>
+    </article>
+
+</main>
+</body>
+</html>

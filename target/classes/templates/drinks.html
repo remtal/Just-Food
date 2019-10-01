@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <title>Drinks</title>
+</head>
+<body>
+<main>
+    <header>
+        <h2>Drinks</h2>
+        <h5>
+            <a href="register.html" th:href= "@{/register}" target="_blank"><img src="../static/images/register.png" th:src="@{/images/register.png}" style = "width: 100px; height: 50px;"/></a>
+            <a href="profile.html" th:href = "@{/profile}" target="_blank"><img src="../static/images/profile1.png" th:src="@{/images/profile1.png}" style = "width: 100px; height: 50px;"/></a>
+        </h5>
+        <img src="../static/images/drinks.jpg" th:src="@{/images/drinks.jpg}" alt="Drinks" style = "width: 300px; height: 300px;"/>
+
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" th:href="@{/}">Home</a></li>
+
+            <li><a href="breakfast.html" th:href="@{/breakfast}">Breakfast</a></li>
+            <li><a href="lunch.html" th:href="@{/lunch}">Lunch</a></li>
+            <li><a href="dinner.html" th:href="@{/dinner}">Dinner</a></li>
+            <div class="dropdown">
+                <li>
+                    <a onclick="show_menu()" class="dropdownlink">Other</a>
+                </li>
+                <div id="other" class="menuitems">
+                    <li><a href="snacks.html" th:href="@{/snacks}">Snacks</a></li>
+                    <li><a href="icecream.html" th:href="@{/icecream}">Ice-Cream</a></li>
+                </div>
+
+            </div>
+        </ul>
+
+    </nav>
+    <article id ="drinks">
+    <br>
+        <a href="https://www.allrecipes.com/recipe/246930/frozen-berry-smoothie/?internalSource=hub%20recipe&referringContentType=Search">Berry Smoothie</a>
+        <div class="box"><iframe src="https://www.allrecipes.com/recipe/246930/frozen-berry-smoothie/?internalSource=hub%20recipe&referringContentType=Search"></iframe></div>
+    </br>
+    <br>
+        <a href="https://www.allrecipes.com/recipe/32355/lemonade/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%202">Lemonade</a>
+        <div class="box"><iframe src="https://www.allrecipes.com/recipe/32355/lemonade/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%202"></iframe></div>
+    </br>
+    <br>
+        <a href="https://www.allrecipes.com/recipe/63969/creamy-hot-chocolate/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%209">Hot Chocolate</a>
+        <div class="box"><iframe src="https://www.allrecipes.com/recipe/63969/creamy-hot-chocolate/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%209"></iframe></div>
+    </br>
+    </article>
+    <article>
+        <p><br>Eating in the middle of the day, re-enegises your body and help you feel refreshed and ready to take on the next several hours. In addition, eating lunch keeps your metabolism active.</br></p>
+        <p><br>Most of the time, lunch doesn't really feel like a big deal. If we're able to take a break then we rush through lunch hoping to finish off work quickly. However, studies have shown that lunch is a very important meal of the day and should not be rushed.</br></p>
+    </article>
+</main>
+</body>
+</html>

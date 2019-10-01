@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <title>Snacks</title>
+</head>
+<body>
+<main>
+    <header>
+        <h2>Snack Recipes</h2>
+        <h5>
+            <a href="register.html" th:href= "@{/register}" target="_blank"><img src="../static/images/register.png" th:src="@{/images/register.png}" style = "width: 100px; height: 50px;"/></a>
+            <a href="profile.html" th:href = "@{/profile}" target="_blank"><img src="../static/images/profile1.png" th:src="@{/images/profile1.png}" style = "width: 100px; height: 50px;"/></a>
+        </h5>
+
+        <img src="../static/images/snack.jpg" th:src="@{/images/snack.jpg}" alt="Snacks" style = "width: 400px; height: 300px;"/>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" th:href="@{/}">Home</a></li>
+
+            <li><a href="breakfast.html" th:href="@{/breakfast}">Breakfast</a></li>
+            <li><a href="lunch.html" th:href="@{/lunch}">Lunch</a></li>
+            <li><a href="dinner.html" th:href="@{/dinner}">Dinner</a></li>
+            <div class="dropdown">
+                <li>
+                    <a onclick="show_menu()" class="dropdownlink">Other</a>
+                </li>
+                <div id="other" class="menuitems">
+                    <li><a href="drinks.html" th:href="@{/drinks}">Drinks</a></li>
+                    <li><a href="icecream.html" th:href="@{/icecream}">Ice-Cream</a></li>
+                </div>
+            </div>
+        </ul>
+
+    </nav>
+    <article id ="snacks">
+        <br>
+        <a href="https://www.allrecipes.com/recipe/15006/spiced-sweet-roasted-red-pepper-hummus/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%203">Red Pepper Houmous</a>
+        <div class="box"><iframe src="https://www.allrecipes.com/recipe/15006/spiced-sweet-roasted-red-pepper-hummus/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%203"></iframe></div>
+        </br>
+        <br>
+        <a href="https://www.allrecipes.com/recipe/228025/bircher-muesli-swiss-oatmeal/?internalSource=hub%20recipe&referringContentType=Search">Bircher</a>
+        <div class="box"><iframe src="https://www.allrecipes.com/recipe/228025/bircher-muesli-swiss-oatmeal/?internalSource=hub%20recipe&referringContentType=Search"></iframe></div>
+        </br>
+        <br>
+        <a href="https://www.allrecipes.com/recipe/41236/easy-decadent-truffles/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%202">Chocolate Truffle</a>
+        <div class="box"><iframe src="https://www.allrecipes.com/recipe/41236/easy-decadent-truffles/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%202"></iframe></div>
+        </br>
+    </article>
+    <article>
+        <p><br>Snack foods are often foods that are processed and high in calories. However, what people do not realise, snacking is simply the process of eating/drinking in between major meals.</br></p>
+        <p><br>We offer great choices of different snacks for you to try, whether you're looking for healthy snacks or for just general snacks which you can pluck off the counter.</br></p>
+        <p><br>Keep in mind, Do not Snack too much as often snacking large amounts will make us less likely to eat the next major meal, whether it be lunch or dinner, and both of these meals are incredibly important/</br></p>
+    </article>
+</main>
+</body>
+</html>

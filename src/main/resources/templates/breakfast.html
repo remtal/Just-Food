@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <title>Breakfast</title>
+</head>
+<body>
+
+<main>
+    <header>
+        <h3>Breakfast Recipes</h3>
+        <h5>
+            <a href="register.html" th:href= "@{/register}" target="_blank"><img src="../static/images/register.png" th:src="@{/images/register.png}" style = "width: 100px; height: 50px;"/></a>
+            <a href="profile.html" th:href = "@{/profile}" target="_blank"><img src="../static/images/profile1.png" th:src="@{/images/profile1.png}" style = "width: 100px; height: 50px;"/></a>
+        </h5>
+        <img src="../static/images/breakfast.jpg" th:src="@{/images/breakfast.jpg}" alt="Breakfast" style = "width: 400px; height: 300px;"/>
+
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" th:href="@{/}">Home</a></li>
+            <li><a href="lunch.html" th:href="@{/lunch}">Lunch</a></li>
+            <li><a href="dinner.html" th:href="@{/dinner}">Dinner</a></li>
+
+            <div class="dropdown">
+                <li>
+                    <a onclick="show_menu()" class="dropdownlink">Other</a>
+                </li>
+                <div id="other" class="menuitems">
+                    <li><a href="snacks.html" th:href="@{/snacks}">Snacks</a></li>
+                    <li><a href="drinks.html" th:href="@{/drinks}">Drinks</a></li>
+                    <li><a href="icecream.html" th:href="@{/icecream}">Ice-Cream</a></li>
+                </div>
+            </div>
+        </ul>
+
+    </nav>
+    <article id="break">
+    <br>
+        <a href="https://www.allrecipes.com/recipe/229780/baked-denver-omelet/?internalSource=hub%20recipe&referringContentType=Search">Omlette</a>
+        <div class="box"><iframe src="https://www.allrecipes.com/recipe/229780/baked-denver-omelet/?internalSource=hub%20recipe&referringContentType=Search"></iframe></div>
+</br>
+    <br>
+        <a href="https://www.allrecipes.com/recipe/162760/fluffy-pancakes/?internalSource=hub%20recipe&referringContentType=Search">Fluffy Pancakes</a>
+        <div class="box"><iframe src="https://www.allrecipes.com/recipe/162760/fluffy-pancakes/?internalSource=hub%20recipe&referringContentType=Search"></iframe></div>
+</br>
+    <br>
+        <a href="https://www.allrecipes.com/recipe/10354/banana-split-bars/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201">Banana Split</a>
+        <div class="box"><iframe src="https://www.allrecipes.com/recipe/10354/banana-split-bars/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%201"></iframe></div>
+</br>
+</article>
+    <article>
+        <p><br>During a busy morning, it's easy to let breakfast fall low in your list of priorities, but taking just a few minutes to have something to eat can really make a difference in your day.</br></p>
+        <p><br>Breakfast provides the body and brain with fuel after an overnight fast. Breakfast foods apart from providing us with energy are good sources of important nutrients such as Calcium, Iron and Vitamins.</br></p>
+    </article>
+</main>
+</body>
+</html>

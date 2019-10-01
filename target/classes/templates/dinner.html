@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <title>Dinner</title>
+</head>
+<body>
+
+<main>
+    <header>
+        <h4>Dinner Recipes</h4>
+        <h5>
+            <a href="register.html" th:href= "@{/register}" target="_blank"><img src="../static/images/register.png" th:src="@{/images/register.png}" style = "width: 100px; height: 50px;"/></a>
+            <a href="profile.html" th:href = "@{/profile}" target="_blank"><img src="../static/images/profile1.png" th:src="@{/images/profile1.png}" style = "width: 100px; height: 50px;"/></a>
+        </h5>
+        <img src="../static/images/dinner.jpg" th:src="@{/images/dinner.jpg}" alt="Dinner" style = "width: 400px; height: 300px;"/>
+
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" th:href="@{/}">Home</a></li>
+            <li><a href="breakfast.html" th:href="@{/breakfast}">Breakfast</a></li>
+            <li><a href="lunch.html" th:href="@{/lunch}">Lunch</a></li>
+
+            <div class="dropdown">
+                <li>
+                    <a onclick="show_menu()" class="dropdownlink">Other</a>
+                </li>
+                <div id="other" class="menuitems">
+                    <li><a href="snacks.html" th:href="@{/snacks}">Snacks</a></li>
+                    <li><a href="drinks.html" th:href="@{/drinks}">Drinks</a></li>
+                    <li><a href="icecream.html" th:href="@{/icecream}">Ice-Cream</a></li>
+                </div>
+
+            </div>
+        </ul>
+
+    </nav>
+    <article id="dinner">
+    <br>
+        <a href="https://www.allrecipes.com/recipe/217377/spaghetti-bolognese/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%202">Spaghetti Bolognese</a>
+        <div class="box"><iframe src="https://www.allrecipes.com/recipe/217377/spaghetti-bolognese/?internalSource=hub%20recipe&referringContentType=Search&clickId=cardslot%202"></iframe></div>
+    </br>
+    <br>
+        <a href="https://www.allrecipes.com/recipe/46822/indian-chicken-curry-ii/?internalSource=hub%20recipe&referringContentType=Search">Chicken Curry</a>
+        <div class="box"><iframe src="https://www.allrecipes.com/recipe/46822/indian-chicken-curry-ii/?internalSource=hub%20recipe&referringContentType=Search"></iframe></div>
+
+    </br>
+    <br>
+        <a href="https://www.allrecipes.com/recipe/21340/lindas-lasagna/?internalSource=hub%20recipe&referringContentType=Search">Beef Lasagne</a>
+        <div class="box"><iframe src="https://www.allrecipes.com/recipe/21340/lindas-lasagna/?internalSource=hub%20recipe&referringContentType=Search"></iframe></div>
+
+    </br>
+    </article>
+    <article>
+        <p><br>Dinner is considered by several, as the most important meal in the daily cycle of meals. While most households have tended to share the main daily meal during daylight hours, some societies have pushed dinner to the evenings, making it the most important meal.</br</p>
+        <p><br>Beyond serving as a family gathering, a dinner can be elaborate and often the major meals during the year (Christmas, Thanksgiving) are identified as dinner.</br></p>
+    </article>
+    <!--<article>-->
+    <!--<p>Rigoletto (pronounced [riɡoˈletːto]) is an opera in three acts[1] by Giuseppe Verdi. The Italian libretto was-->
+    <!--written by Francesco Maria Piave based on the play Le roi s'amuse by Victor Hugo. Despite serious initial-->
+    <!--problems with the Austrian censors who had control over northern Italian theatres at the time, the opera had-->
+    <!--a triumphant premiere at La Fenice in Venice on 11 March 1851.</p>-->
+
+    <!--<p>It is widely considered to be the first of the operatic masterpieces of Verdi's middle-to-late career. Its-->
+    <!--tragic story revolves around the licentious Duke of Mantua, his hunch-backed court jester Rigoletto, and-->
+    <!--Rigoletto's beautiful daughter Gilda. The opera's original title, La maledizione (The Curse), refers to a-->
+    <!--curse placed on both the Duke and Rigoletto by a courtier whose daughter the Duke has seduced with-->
+    <!--Rigoletto's encouragement. The curse comes to fruition when Gilda falls in love with the Duke and sacrifices-->
+    <!--her life to save him from the assassin hired by her father.</p>-->
+    <!--</article>-->
+
+    <!--<section class="images">-->
+    <!--<img src="../static/images/rigo/rig_1.jpg" th:src="@{/images/rigo/rig_1.jpg}" alt="Rigoletto 1"/>-->
+    <!--<img src="../static/images/rigo/rig_2.jpg" th:src="@{/images/rigo/rig_2.jpg}" alt="Rigoletto 2"/>-->
+    <!--<img src="../static/images/rigo/rig_3.jpg" th:src="@{/images/rigo/rig_3.jpg}" alt="Rigoletto 3"/>-->
+    <!--</section>-->
+
+    <!--<section class="video">-->
+    <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/10R2TzsQLws" frameborder="0"-->
+    <!--allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+    <!--allowfullscreen></iframe>-->
+    <!--</section>-->
+</main>
+</body>
+</html>

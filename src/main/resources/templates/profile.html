@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <title>Profile</title>
+</head>
+<body>
+
+<main>
+    <header>
+        <h2>Profile</h2>
+        <img src="../static/images/profile.png" th:src="@{/images/profile.png}" alt="Profile" style = "width: 200px; height: 200px;"/>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" th:href="@{/}">Home</a></li>
+
+            <li><a href="breakfast.html" th:href="@{/breakfast}">Breakfast</a></li>
+            <li><a href="lunch.html" th:href="@{/lunch}">Lunch</a></li>
+            <li><a href="dinner.html" th:href="@{/dinner}">Dinner</a></li>
+
+            <div class="dropdown">
+                <li>
+                    <a onclick="show_menu()" class="dropdownlink">Other</a>
+                </li>
+                <div id="other" class="menuitems">
+                    <li><a href="snacks.html" th:href="@{/snacks}">Snacks</a></li>
+                    <li><a href="drinks.html" th:href="@{/drinks}">Drinks</a></li>
+                    <li><a href="icecream.html" th:href="@{/icecream}">Ice-Cream</a></li>
+                </div>
+            </div>
+        </ul>
+
+    </nav>
+
+    <article>
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td th:text="${collatedUser.getRecipeUser().firstName}">Ann</td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td th:text="${collatedUser.getRecipeUser().lastName}">Ann</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td th:text="${collatedUser.getRecipeUser().email}">ann@companay.com</td>
+            </tr>
+
+        </table>
+
+        <br />
+        <br />
+        <table>
+            <tr>
+                <th>Login History</th>
+            </tr>
+            <tr th:each="login : ${collatedUser.logins}">
+                <td th:text="${login.getTime()}">1st March 2019</td>
+            </tr>
+        </table>
+
+    </article>
+</main>
+</body>
+</html>

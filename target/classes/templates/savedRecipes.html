@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <title>Saved Recipes</title>
+</head>
+<body>
+<main>
+    <header>
+        <h2>Saved Recipes</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" th:href="@{/}">Home</a></li>
+
+            <li><a href="breakfast.html" th:href="@{/breakfast}">Breakfast</a></li>
+            <li><a href="lunch.html" th:href="@{/lunch}">Lunch</a></li>
+            <li><a href="dinner.html" th:href="@{/dinner}">Dinner</a></li>
+
+            <div class="dropdown">
+                <li>
+                    <a onclick="show_menu()" class="dropdownlink">Other</a>
+                </li>
+                <div id="other" class="menuitems">
+                    <li><a href="snacks.html" th:href="@{/snacks}">Snacks</a></li>
+                    <li><a href="drinks.html" th:href="@{/drinks}">Drinks</a></li>
+                    <li><a href="icecream.html" th:href="@{/icecream}">Ice-Cream</a></li>
+                </div>
+            </div>
+        </ul>
+
+    </nav>
+    <br>
+    <article id = "row1">
+        <br><header>Breakfast</header></br>
+        <br><button onclick="omlette()">Omlette</button></br>
+        <p id ="omlette"></p>
+        <script>
+            function omlette(){
+                document.getElementById("omlette").innerHTML = "Time: 10 minutes"
+            }
+        </script>
+        <br><button onclick="fap()">Fluffy American Pancake</button></br>
+        <p id ="fap"></p>
+        <script>
+            function fap(){
+                document.getElementById("fap").innerHTML = "Time: 40 minutes"
+            }
+        </script>
+        <br><button onclick="bbs()">Breakfast Banana Split</button></br>
+        <p id ="bbs"></p>
+        <script>
+            function bbs(){
+                document.getElementById("bbs").innerHTML = "Time: 5 minutes"
+            }
+        </script>
+        <br></br>
+        <br><header>Lunch</header></br>
+        <br><button onclick="jp()">Jacket Potato</button></br>
+        <p id ="jp"></p>
+        <script>
+            function jp(){
+                document.getElementById("jp").innerHTML = "Time: 10 minutes"
+            }
+        </script>
+        <br><button onclick="ts()">Tuna Salad</button></br>
+        <p id ="ts"></p>
+        <script>
+            function ts(){
+                document.getElementById("ts").innerHTML = "Time: 30 minutes"
+            }
+        </script>
+        <br><button onclick="cls()">Carrot and Lentil Soup</button></br>
+        <p id ="cls"></p>
+        <script>
+            function cls(){
+                document.getElementById("cls").innerHTML = "Time: 25 minutes"
+            }
+        </script>
+    </article>
+    <article id ="row2">
+        <br><header>Dinner</header></br>
+        <br><button onclick="sb()">Spaghetti Bolognese</button></br>
+        <p id ="sb"></p>
+        <script>
+            function sb(){
+                document.getElementById("sb").innerHTML = "Time: 45 minutes"
+            }
+        </script>
+        <br><button onclick="cc()">Chicken Curry</button></br>
+        <p id ="cc"></p>
+        <script>
+            function cc(){
+                document.getElementById("cc").innerHTML = "Time: 1 hour"
+            }
+        </script>
+        <br><button onclick="bl()">Beef Lasagne</button></br>
+        <p id ="bl"></p>
+        <script>
+            function bl(){
+                document.getElementById("bl").innerHTML = "Time: 2 hours"
+            }
+        </script>
+        <br></br>
+        <br><header>Snacks</header></br>
+        <br><button onclick="rph()">Red Pepper Houmous</button></br>
+        <p id ="rph"></p>
+        <script>
+            function rph(){
+                document.getElementById("rph").innerHTML = "Time: 30 minutes"
+            }
+        </script>
+        <br><button onclick="abb()">Bircher</button></br>
+        <p id ="abb"></p>
+        <script>
+            function abb(){
+                document.getElementById("abb").innerHTML = "Time: 10 minutes"
+            }
+        </script>
+        <br><button onclick="ct()">Chocolate Truffle</button></br>
+        <p id ="ct"></p>
+        <script>
+            function ct(){
+                document.getElementById("ct").innerHTML = "Time: 30 minutes"
+            }
+        </script>
+
+    </article>
+    <article id ="row3">
+        <br><header>Drinks</header></br>
+        <br><button onclick="bs()">Berry Smoothie</button></br>
+        <p id ="bs"></p>
+        <script>
+            function bs(){
+                document.getElementById("bs").innerHTML = "Time: 10 minutes"
+            }
+        </script>
+        <br><button onclick="l()">Lemonade</button></br>
+        <p id ="l"></p>
+        <script>
+            function l(){
+                document.getElementById("l").innerHTML = "Time: 10 minutes"
+            }
+        </script>
+        <br><button onclick="hc()">Hot Chocolate</button></br>
+        <p id ="hc"></p>
+        <script>
+            function hc(){
+                document.getElementById("hc").innerHTML = "Time: 7 minutes"
+            }
+        </script>
+        <br></br>
+        <br><header>Ice-Cream</header></br>
+        <br><button onclick="dcg()">Caramel Macchiato Ice Cream</button></br>
+        <p id ="dcg"></p>
+        <script>
+            function dcg(){
+                document.getElementById("dcg").innerHTML = "Time: 30 minutes"
+            }
+        </script>
+        <br><button onclick="hic()">Homemade Ice Cream</button></br>
+        <p id ="hic"></p>
+        <script>
+            function hic(){
+                document.getElementById("hic").innerHTML = "Time: 30 minutes"
+            }
+        </script>
+        <br><button onclick="mci()">Mint Chocolate Ice Cream</button></br>
+        <p id ="mci"></p>
+        <script>
+            function mci(){
+                document.getElementById("mci").innerHTML = "Time: 45 minutes"
+            }
+        </script>
+    </article>
+    <article id="Refresh">
+        <form>
+            <input type="submit" Name="Refresh" onclick="history.go(0)" VALUE = "Refresh" style="height: 40px; width: 100px">
+        </form>
+    </article>
+    <footer>
+
+    </footer>
+</main>
+</body>
+</html>

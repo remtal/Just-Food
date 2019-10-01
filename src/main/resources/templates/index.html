@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+    <script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+    <title>Recipes</title>
+</head>
+<body>
+<main>
+    <header>
+        <h1>Just Cook</h1>
+        <h5>
+        <a href="register.html" th:href= "@{/register}" target="_blank"><img src="../static/images/register.png" th:src="@{/images/register.png}" style = "width: 100px; height: 50px;"/></a>
+        <a href="profile.html" th:href = "@{/profile}" target="_blank"><img src="../static/images/profile1.png" th:src="@{/images/profile1.png}" style = "width: 100px; height: 50px;"/></a>
+        </h5>
+        <img src="../static/images/logo.jpg" th:src="@{/images/logo.jpg}" alt="Recipes." class="responsive" />
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" th:href="@{/}">Home</a></li>
+            <li><a href="breakfast.html" th:href="@{/breakfast}">Breakfast</a></li>
+            <li><a href="lunch.html" th:href="@{/lunch}">Lunch</a></li>
+            <li><a href="dinner.html" th:href="@{/dinner}">Dinner</a></li>
+            <li><a href="savedRecipes.html" th:href="@{/savedRecipes}">Saved Recipes</a></li>
+
+            <div class="dropdown">
+                <li>
+                    <a onclick="show_menu()" class="dropdownlink">Other</a>
+                </li>
+                <div id="other" class="menuitems">
+                    <li><a href="snacks.html" th:href="@{/snacks}">Snacks</a></li>
+                    <li><a href="drinks.html" th:href="@{/drinks}">Drinks</a></li>
+                    <li><a href="icecream.html" th:href="@{/icecream}">Ice-Cream</a></li>
+                </div>
+            </div>
+        </ul>
+
+    </nav>
+    <article>
+        <p0><br>About Us: </br></p0>
+        <p1><br>At Just Cook, we aim to make cooking a quick process, cooking at times can prove to be tedious, a minor mistake can easily ruin the whole experience.
+            At Just Cook, we strive to make this experience an enjoyable one, one which allows you to make quick and effective dishes bursting with flavour.</br></p1>
+        <p2><br>We love to cook and try new things in the kitchen. Our goal is simple, we hope to inspire you to get in the kitchen and cook our fresh and delicious recipes.</br></p2>
+        <p3><br>Our belief is that cooking should be fun and never stressful. Its because of this we do our best to make our recipes adaptable and flexible so you can match your personality, diets and needs.</br></p3>
+    </article>
+
+    <footer>
+        <br>Follow us on Social Media: </br>
+        <a href="https://www.instagram.com/" target="_blank"><img src="../static/images/insta.png" th:src="@{/images/insta.png}" style = "width: 50px; height: 50px;"/></a>
+        <a href="https://www.snapchat.com/" target="_blank"><img src="../static/images/snap.png" th:src="@{/images/snap.png}" style = "width: 50px; height: 50px;"/></a>
+        <a href="https://www.facebook.com/" target="_blank"><img src="../static/images/facebook.png" th:src="@{/images/facebook.png}" style = "width: 50px; height: 50px;"/></a>
+    </footer>
+</main>
+</body>
+</html>
+
